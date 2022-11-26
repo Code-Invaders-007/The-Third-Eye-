@@ -64,8 +64,8 @@ var layout = {
     mapbox: {
         bearing: 0,
         center: {
-            lat: 45,
-            lon: -73
+            lat: 12.9716,
+            lon: 77.5946
         },
         pitch: 0,
         zoom: 5
