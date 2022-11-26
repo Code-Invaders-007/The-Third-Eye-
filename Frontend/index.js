@@ -59,6 +59,7 @@ var layout = {
         color:"black"
     },
     plot_bgcolor: "grey",
+    paper_bgcolor: "grey",
     
     hovermode: 'closest',
     mapbox: {
@@ -106,7 +107,7 @@ age1.push(fif);
 var data1 = [{
    
     values: age1,
-    labels: ["18","30","50"],
+    labels: ["18-30 YEARS","30-50 YEARS","50 YEARS ABOVE"],
     type: 'pie'
   }];
   
@@ -115,7 +116,7 @@ var data1 = [{
         size:25,
         color:"black"
     },
-    background: "red",
+   // background: "red",
     title: 'Age Group',
     height: 500,
     width: 500
@@ -125,10 +126,33 @@ var data1 = [{
   
   Plotly.newPlot("Pie1", data1, layout1,config1);
 
+  //bar chart starts.........
+  var data = [
+    {
+      x: ['kar', 'Maha', 'UttarPradesh'],
+      y: [20, 14, 23],
+      type: 'bar'
+    }
+  ];
+  
+  Plotly.newPlot('bar', data);
 
 
 
-
-
-
-
+  //line chart starts.........
+  var trace1 = {
+    x: [1, 2, 3, 4],
+    y: [10, 15, 13, 17],
+    type: 'scatter'
+  };
+  
+  var trace2 = {
+    x: [1, 2, 3, 4],
+    y: [16, 5, 11, 9],
+    type: 'scatter'
+  };
+  
+  var data = [trace1];
+  
+  Plotly.newPlot('line', data);
+  
