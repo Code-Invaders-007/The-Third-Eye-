@@ -1,0 +1,66 @@
+
+#header{
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p{
+    color: red;
+}
+
+#graph{
+    display: flex;
+    flex-direction: row;
+    border: 50pt;
+justify-content: center
+
+ 
+}
+
+ 
+
+ #mapbox{
+    background-color:black;
+    padding:1%;
+    border-radius: 10px;
+    margin-right: 1%;
+    flex-wrap: wrap;
+    position: relative;
+} 
+
+#Pie1{
+    background-color:black;
+    padding:1%;
+    border-radius: 10px;
+    margin-right: 1%;
+    margin-left: 0.5%;
+
+}
+
+#summary{
+    border-color: #000;
+    display: flex;
+    flex-direction: column;
+    border:10px;
+     justify-content: flex-start; 
+    padding-top: 2%;
+    
+}
+#info{
+    /* justify-content: center; */
+    padding-top: 20px;
+}
+
+#info p
+{
+    background-color: bisque;
+    padding: 10px;
+    border-radius: 10px;
+}
