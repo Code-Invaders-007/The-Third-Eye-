@@ -86,9 +86,9 @@ Plotly.newPlot('mapbox', data, layout,config);
 //map plotting end..........
 var eit=0,th=0,fif=0;
 age.forEach((val)=>{
-    if(val==18)
+    if(val>=18&&val<30)
     eit++
-    else if(val==30)
+    else if(val>=30&&val<50)
     th++;
     else
     fif++;
@@ -127,22 +127,42 @@ var data1 = [{
   Plotly.newPlot("Pie1", data1, layout1,config1);
 
   //bar chart starts.........
-  var data = [
-    {
-      x: ['kar', 'Maha', 'UttarPradesh'],
-      y: [20, 14, 23],
-      type: 'bar'
+  var trace1 = {
+    x: ['Kar', 'Mah', 'kerala', 'U.P', 'Punjab', 'Tamil Nadu'],
+    y: [8.0, 8.0, 12.0, 12.0, 13.0, 20.0],
+    type: 'bar',
+    text: ['4.17 below the mean', '4.17 below the mean', '0.17 below the mean', '0.17 below the mean', '0.83 above the mean', '7.83 above the mean'],
+    marker: {
+      color: 'rgb(142,124,195)'
     }
-  ];
+  };
   
-  Plotly.newPlot('bar', data);
-
+  var data = [trace1];
+  
+  var layout = {
+    title: 'States vs Cases',
+    font:{
+      family: 'Raleway, sans-serif'
+    },
+    showlegend: false,
+    xaxis: {
+      tickangle: -45
+    },
+    yaxis: {
+      zeroline: false,
+      gridwidth: 2
+    },
+    bargap :0.05
+  };
+  
+  Plotly.newPlot('bar', data, layout);
+  
 
 
   //line chart starts.........
   var trace1 = {
-    x: [1, 2, 3, 4],
-    y: [10, 15, 13, 17],
+    y: [1, 2, 3, 4],
+    x: ["jan", "feb", "mar", "apr"],
     type: 'scatter'
   };
   
@@ -151,8 +171,12 @@ var data1 = [{
     y: [16, 5, 11, 9],
     type: 'scatter'
   };
+
+  var layout = {
+    title:'MOnthly cases'
+  };
   
   var data = [trace1];
   
-  Plotly.newPlot('line', data);
+  Plotly.newPlot('line', data,layout);
   
